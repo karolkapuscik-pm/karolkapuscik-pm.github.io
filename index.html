@@ -14,14 +14,30 @@
       background-color: #f5f5f5;
       color: #333;
     }
-    h1, h2 {
-      text-align: center;
-      color: #2c3e50;
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
     }
-    h1 {
-      margin-bottom: 0;
+    .header h1 {
+      margin: 0;
+      color: #2c3e50;
+      font-size: 2em;
+    }
+    .header p {
+      margin: 0;
+      color: #2c3e50;
+      font-size: 1.1em;
+    }
+    .header img {
+      max-height: 80px;
+      border-radius: 10px; /* zaokrąglone rogi */
+      object-fit: cover;
     }
     h2 {
+      text-align: center;
+      color: #2c3e50;
       margin-top: 50px;
     }
     p {
@@ -51,8 +67,16 @@
   </style>
 </head>
 <body>
-  <h1>RSQ Karol Kapuścik</h1>
-  <p style="text-align:center; font-size:1.1em;">Management Project Consulting | Agile DevOps QA</p>
+
+  <div class="header">
+    <div>
+      <h1>RSQ Karol Kapuścik</h1>
+      <p>Management Project Consulting | Agile DevOps QA</p>
+    </div>
+    <div>
+      <img src="eed76706-ff39-4dcb-abf4-30b1f4d1daab.png" alt="RSQ Logo">
+    </div>
+  </div>
 
   <h2>About</h2>
   <p>
