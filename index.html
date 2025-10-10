@@ -14,67 +14,93 @@
       background-color: #f5f5f5;
       color: #333;
     }
+
+    /* Nagłówek z logo */
     .header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 20px;
     }
-    .header h1 {
+
+    .header-text h1 {
       margin: 0;
       color: #2c3e50;
       font-size: 2em;
     }
-    .header p {
+
+    .header-text p {
       margin: 0;
       color: #2c3e50;
       font-size: 1.1em;
     }
-    .header img {
-      max-height: 80px;
+
+    .header-logo img {
+      max-height: 80px;   /* wysokość logo */
+      max-width: 150px;   /* szerokość, jeśli logo jest szerokie */
       border-radius: 10px; /* zaokrąglone rogi */
-      object-fit: cover;
+      object-fit: contain;  /* zachowuje proporcje */
     }
+
     h2 {
       text-align: center;
       color: #2c3e50;
       margin-top: 50px;
     }
+
     p {
       text-align: justify;
     }
+
     .roles, .skills, .certifications, .contact {
       margin-top: 30px;
     }
+
     ul {
       list-style-type: disc;
       margin-left: 20px;
     }
+
     .role-item {
       margin-bottom: 15px;
     }
+
     .role-title {
       font-weight: bold;
       color: #2c3e50;
     }
+
     .role-desc {
       color: #555;
     }
+
     .contact p {
       text-align: center;
       font-size: 1.1em;
+    }
+
+    /* Responsywność */
+    @media (max-width: 600px) {
+      .header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .header-logo img {
+        margin-top: 10px;
+      }
     }
   </style>
 </head>
 <body>
 
   <div class="header">
-    <div>
+    <div class="header-text">
       <h1>RSQ Karol Kapuścik</h1>
       <p>Management Project Consulting | Agile DevOps QA</p>
     </div>
-    <div>
-      <img src="eed76706-ff39-4dcb-abf4-30b1f4d1daab.png" alt="RSQ Logo">
+    <div class="header-logo">
+      <img src="logo.png" alt="RSQ Logo">
     </div>
   </div>
 
@@ -167,5 +193,6 @@
   <div class="contact">
     <p>karol.kapuscik(at)int.pl</p>
   </div>
+
 </body>
 </html>
